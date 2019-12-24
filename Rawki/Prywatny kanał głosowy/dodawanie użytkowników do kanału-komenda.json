@@ -1,0 +1,301 @@
+{
+  "name": "dodaj",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "BqtHd",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "22",
+      "storage": "1",
+      "varName2": "tag",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "av",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "priv",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "3",
+      "iftrueVal": "4",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "title": "Nie posiadasz kanału prywatnego!",
+      "author": "${tempVars(\"tag\")}",
+      "color": "#ff0000",
+      "url": "",
+      "authorIcon": "${tempVars(\"av\")}",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "true",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "npsd",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "npsd",
+      "message": "Aby go stworzć wejdź na kanał głosowy o nazwie **WEJDZ TUTAJ!**",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "npsd",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "3",
+      "iftrueVal": "4",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "title": "Złe użycie komendy!",
+      "author": "${tempVars(\"tag\")}",
+      "color": "#ff0000",
+      "url": "",
+      "authorIcon": "${tempVars(\"av\")}",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "true",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "zleuz",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "zleuz",
+      "fieldName": "Poprawne użycie:",
+      "message": "`!dodaj <@osoba>`",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "zleuz",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "19",
+      "storage": "1",
+      "varName2": "cvc",
+      "name": "Store Member Info"
+    },
+    {
+      "storage": "1",
+      "varName": "cvc",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "3",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "caid",
+      "name": "Store Voice Channel Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "privid",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "privid",
+      "name": "Store Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "caid",
+      "comparison": "1",
+      "value": "${tempVars(\"privid\")}",
+      "iftrue": "3",
+      "iftrueVal": "4",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "title": "Błąd!",
+      "author": "${tempVars(\"tag\")}",
+      "color": "#ff0000",
+      "url": "",
+      "authorIcon": "${tempVars(\"av\")}",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "true",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "blad",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "blad",
+      "message": "Musisz być na swoim kanale głosowym by móc dodać jakąś osobę!",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "blad",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "mid",
+      "name": "Store Member Info"
+    },
+    {
+      "info": "0",
+      "find": "${tempVars(\"mid\")}",
+      "storage": "1",
+      "varName": "fmm",
+      "name": "Find Member"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "vciddd",
+      "name": "Store Voice Channel Info"
+    },
+    {
+      "info": "0",
+      "find": "${tempVars(\"vciddd\")}",
+      "storage": "1",
+      "varName": "vvv",
+      "name": "Find Voice Channel"
+    },
+    {
+      "vchannel": "3",
+      "varName": "vvv",
+      "member": "2",
+      "varName2": "fmm",
+      "permission": "CONNECT",
+      "state": "0",
+      "name": "Set Member Voice Channel Perms"
+    },
+    {
+      "time": "500",
+      "measurement": "0",
+      "name": "Wait"
+    },
+    {
+      "vchannel": "3",
+      "varName": "vvv",
+      "member": "2",
+      "varName2": "fmm",
+      "permission": "SPEAK",
+      "state": "0",
+      "name": "Set Member Voice Channel Perms"
+    },
+    {
+      "title": "Dodano użytkownika!",
+      "author": "${tempVars(\"tag\")}",
+      "color": "#00ff00",
+      "url": "",
+      "authorIcon": "${tempVars(\"av\")}",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "true",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "dodano",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "dodano",
+      "message": "${mentionedUser} pomyślnie został(a) dodany(a) do twojego kanału głosowego!",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "dodano",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
