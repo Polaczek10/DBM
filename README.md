@@ -6,4 +6,4 @@ Znajdziesz tu:
 - Tłumaczenia do DBM
 <br>
 <br>
-Jeśli potrzebujesz więcej wsparcia kliknij <a href="https://discord.gg/8fFT58h">tutaj</a>
+Jeśli potrzebujesz więcej wsparcia kliknij <a href="https://discord.gg/wfYPCju">tutaj</a>
